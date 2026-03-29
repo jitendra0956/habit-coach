@@ -12,12 +12,33 @@ WHAT THIS FILE DOES:
 """
 
 import streamlit as st
+
+st.set_page_config(
+    page_title="AI Habit Coach",
+    page_icon="🔥",
+    layout="wide"
+)
+
 from db.queries import get_db_connection
 from auth.auth_handler import (
-    register_user, login_user_with_credentials,
-    is_logged_in, logout_user, is_pro_user
+    register_user,
+    login_user_with_credentials,
+    is_logged_in,
+    logout_user,
+    is_pro_user
 )
+
 from scheduler.reminder_job import start_scheduler
+
+
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+"""
+
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ── Page config (must be first Streamlit call) ────────────────────────────────
 st.set_page_config(
