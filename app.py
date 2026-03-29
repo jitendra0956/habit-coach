@@ -12,7 +12,7 @@ WHAT THIS FILE DOES:
 """
 
 import streamlit as st
-from db.queries import get_db_connection
+from config import get_db_connection
 from auth.auth_handler import (
     register_user, login_user_with_credentials,
     is_logged_in, logout_user, is_pro_user
