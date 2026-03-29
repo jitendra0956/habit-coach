@@ -4,3 +4,5 @@ altair
 bcrypt
 openai
 python-dotenv
+apscheduler
+stripe
