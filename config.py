@@ -35,3 +35,10 @@ PLAN_DURATIONS = [7, 14, 30]
 DEFAULT_PLAN   = 30
 MAX_FREE_PLAN_DAYS = 7          # Free users get 7-day plans only
 MAX_FREE_COMPLETIONS_PER_DAY = 3  # Free users can complete 3 habits/day
+
+import sqlite3
+
+def get_db_connection():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
