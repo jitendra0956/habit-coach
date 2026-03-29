@@ -1,0 +1,15 @@
+# NEVER commit these to Git
+.env
+*.db
+*.sqlite3
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.streamlit/secrets.toml
